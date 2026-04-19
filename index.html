@@ -428,6 +428,112 @@
     .profile-stat-val { font-size: 0.88rem; font-weight: 700; color: var(--text); }
     .profile-stat-desc { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.1rem; }
 
+    /* ── STRENGTHS ── */
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .strength-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.6rem 1.8rem;
+      border-top: 3px solid var(--accent);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .strength-card:hover {
+      box-shadow: 0 6px 20px rgba(196,123,32,0.10);
+      transform: translateY(-2px);
+    }
+
+    .strength-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.7rem;
+    }
+
+    .strength-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.45;
+    }
+
+    .strength-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── HISTORY ── */
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+
+    .history-list::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      bottom: 0.6rem;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .history-item {
+      position: relative;
+      padding: 0 0 2rem 1.8rem;
+    }
+
+    .history-item:last-child { padding-bottom: 0; }
+
+    .history-item::before {
+      content: '';
+      position: absolute;
+      left: -1.9rem;
+      top: 0.55rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--accent);
+    }
+
+    .history-item.current::before {
+      background: var(--accent);
+    }
+
+    .history-period {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      margin-bottom: 0.3rem;
+    }
+
+    .history-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .history-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -463,6 +569,7 @@
       .section-wrap.alt { padding: 4rem 1.5rem; }
       .work-card { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
+      .strengths-grid { grid-template-columns: 1fr 1fr; }
       .profile-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
@@ -476,6 +583,8 @@
   <ul class="nav-links">
     <li><a href="#works">制作実績</a></li>
     <li><a href="#skills">スキル</a></li>
+    <li><a href="#strengths">強み</a></li>
+    <li><a href="#history">経歴</a></li>
     <li><a href="#profile">プロフィール</a></li>
   </ul>
 </nav>
@@ -597,6 +706,86 @@
       <div class="skill-icon">🤖</div>
       <div class="skill-name">AI活用・編集効率化</div>
       <div class="skill-desc">字幕・テロップの自動生成、台本やタイトルのAI作成、サムネイルのアイデア出し、編集作業の自動化など、AI toolsを活用した制作効率化を実務で実践している</div>
+    </div>
+  </div>
+</div>
+
+<!-- STRENGTHS -->
+<div class="section-wrap" id="strengths">
+  <p class="section-eyebrow reveal">My Strengths</p>
+  <h2 class="section-title reveal">私だけの強み</h2>
+  <div class="strengths-grid">
+
+    <div class="strength-card reveal">
+      <div class="strength-num">01</div>
+      <div class="strength-title">現役で毎日編集している<br />実務直結の講師</div>
+      <div class="strength-desc">現場で日々積み上げているノウハウをそのまま授業に持ち込める。教科書的な知識ではなく、今使えるリアルなスキルを伝えられる。</div>
+    </div>
+
+    <div class="strength-card reveal">
+      <div class="strength-num">02</div>
+      <div class="strength-title">AIを活用した最新の<br />編集効率化を実践</div>
+      <div class="strength-desc">字幕・テロップ自動生成、AI台本作成、サムネイルアイデア出しなど、最新ツールの活用を実務ベースで指導できる。</div>
+    </div>
+
+    <div class="strength-card reveal">
+      <div class="strength-num">03</div>
+      <div class="strength-title">1日3本・高速編集で培った<br />スピードと品質</div>
+      <div class="strength-desc">フルタイムで毎日複数本を仕上げる環境で培った、効率的な作業フローと品質基準を体系的に伝えられる。</div>
+    </div>
+
+    <div class="strength-card reveal">
+      <div class="strength-num">04</div>
+      <div class="strength-title">デジタルハリウッド出身<br />生徒の目線がわかる</div>
+      <div class="strength-desc">同じ学校で学んだ経験があるため、生徒がつまずきやすいポイントや不安な気持ちを理解した上で指導できる。</div>
+    </div>
+
+    <div class="strength-card reveal">
+      <div class="strength-num">05</div>
+      <div class="strength-title">人と接するのが好きな<br />明るく元気な指導スタイル</div>
+      <div class="strength-desc">コミュニケーションを大切にした、親しみやすく前向きな指導を心がけている。生徒が質問しやすい雰囲気づくりが得意。</div>
+    </div>
+
+    <div class="strength-card reveal">
+      <div class="strength-num">06</div>
+      <div class="strength-title">花束先生の元弟子</div>
+      <div class="strength-desc">デジタルハリウッドにて花束先生のもとで動画制作を学んだ。先生の指導スタイルや教育方針を直接受け継いでいる。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- HISTORY -->
+<div class="section-wrap alt">
+  <div class="section-inner" id="history">
+    <p class="section-eyebrow reveal">Career History</p>
+    <h2 class="section-title reveal">経歴</h2>
+    <div class="history-list">
+
+      <div class="history-item reveal">
+        <div class="history-period">— IT企業</div>
+        <div class="history-title">システムエンジニアとして勤務</div>
+        <div class="history-desc">IT企業にてシステムエンジニアとして1年間勤務。論理的な思考力と業務への姿勢を培った。</div>
+      </div>
+
+      <div class="history-item reveal">
+        <div class="history-period">— フリーランス（2年間）</div>
+        <div class="history-title">複数ジャンルの動画制作に携わる</div>
+        <div class="history-desc">フリーランスとして活動し、ジャンルを問わない動画制作の実績を積み上げた。</div>
+      </div>
+
+      <div class="history-item reveal">
+        <div class="history-period">2024年4月</div>
+        <div class="history-title">デジタルハリウッド 動画クリエイター専攻 入学</div>
+        <div class="history-desc">動画制作をより専門的に学ぶためデジタルハリウッドに入学。花束先生のもとで体系的なスキルを習得。</div>
+      </div>
+
+      <div class="history-item current reveal">
+        <div class="history-period">現在</div>
+        <div class="history-title">アトム法律グループ 動画編集者</div>
+        <div class="history-desc">登録者175万人・年間再生10億回規模の法律系YouTubeチャンネルの動画編集者として勤務中。</div>
+      </div>
+
     </div>
   </div>
 </div>
